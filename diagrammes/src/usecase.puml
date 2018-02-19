@@ -1,0 +1,54 @@
+@startuml
+left to right direction
+skinparam backgroundColor #fff
+skinparam defaultFontColor #37474f
+skinparam defaultFontSize 18
+skinparam defaultFontName serif
+skinparam defaultFontStyle normal
+skinparam usecase {
+	BackgroundColor #fff
+	BorderColor #000
+	ArrowColor #000
+	ActorBorderColor black
+}
+skinparam actor {
+	BackgroundColor #fff
+	BorderColor #000
+}
+
+
+
+actor Étudiant as student
+rectangle "Diagramme de cas d'utilisation \ndu système d'apprentissage social"{
+
+usecase shareContent as "Partager du contenu"
+usecase consultContent as "Consulter le contenu\n partagé"
+usecase login as "Authentifier
+                 --
+                 Pas déjà enregistré"
+usecase  register as "S'inscrire"
+
+usecase  askQuestion as "Poser des questions"
+usecase  answerQuestion as "Répondez aux questions"
+usecase  communicate  as "Communiquer \navec les autres"
+usecase  chat as "Communiquer \npar chat"
+usecase  forums as "Communiquer \npar des forums"
+
+register  .> login  : extends
+shareContent ..> login : include
+consultContent ..> login : include
+askQuestion ..> login : include
+answerQuestion ..> login : include
+communicate ..> login : include
+
+communicate <|-- chat
+communicate <|- forums
+
+student -- shareContent
+student -- consultContent
+student -- askQuestion
+student -- answerQuestion
+student -- communicate
+
+}
+@enduml
