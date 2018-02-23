@@ -1,0 +1,54 @@
+@startuml
+left to right direction
+skinparam backgroundColor #fff
+skinparam defaultFontColor #37474f
+skinparam defaultFontSize 18
+skinparam defaultFontName serif
+skinparam defaultFontStyle normal
+skinparam classAttributeIconSize 0
+skinparam classBackgroundColor #fff
+skinparam classBorderColor #000
+skinparam classArrowColor #000
+
+hide class circle
+
+class  "Utilisateur"  as user{
+-id : long
+-prenom : String
+-nom : String
+-email : String
+-nomUtilisateur : String
+-passe : String
+}
+
+class "Contribution" as contribution {
+-id : long
+-description : String
+-date : Date
+}
+
+class "Publication" as post{
+-titre :string
+}
+
+class "Commentaires" as comments
+
+class "Reponse" as response{
+-points : int
+-approuver: boolean
+}
+
+class "Media" as media{
+id : long
+link : string
+}
+
+user  *- "0.*" contribution : est contribué par
+top to bottom direction
+user "1" *-- "0.*" media : est partagé par
+contribution "0.*" o-- "0.*" media : contient
+contribution <|-- post
+contribution <|- comments
+contribution <|- response
+post "1" *- "0.*" comments :\tcontient\t
+@enduml

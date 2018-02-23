@@ -5,16 +5,12 @@ skinparam defaultFontColor #37474f
 skinparam defaultFontSize 18
 skinparam defaultFontName serif
 skinparam defaultFontStyle normal
-skinparam usecase {
-	BackgroundColor #fff
-	BorderColor #000
-	ArrowColor #000
-	ActorBorderColor black
-}
-skinparam actor {
-	BackgroundColor #fff
-	BorderColor #000
-}
+skinparam usecaseBackgroundColor #fff
+skinparam usecaseBorderColor #000
+skinparam usecaseArrowColor #000
+skinparam usecaseActorBorderColor black
+skinparam actorBackgroundColor #fff
+skinparam actorBorderColor #000
 
 
 
