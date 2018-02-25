@@ -19,6 +19,7 @@ class  "Utilisateur"  as user{
 -email : String
 -nomUtilisateur : String
 -passe : String
+-annee : int
 }
 
 class "Contribution" as contribution {
