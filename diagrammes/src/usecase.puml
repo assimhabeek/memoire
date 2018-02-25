@@ -18,7 +18,6 @@ actor Étudiant as student
 rectangle "Diagramme de cas d'utilisation \ndu système d'apprentissage social"{
 
 usecase shareContent as "Partager du contenu"
-usecase consultContent as "Consulter le contenu\n partagé"
 usecase login as "Authentifier
                  --
                  Pas déjà enregistré"
@@ -26,24 +25,28 @@ usecase  register as "S'inscrire"
 
 usecase  askQuestion as "Poser des questions"
 usecase  answerQuestion as "Répondez aux questions"
+usecase  comment as "Commenter sur \nune publication"
 usecase  communicate  as "Communiquer \navec les autres"
 usecase  chat as "Communiquer \npar chat"
 usecase  forums as "Communiquer \npar des forums"
+usecase  interact as "Interagit avec\n un partage"
+usecase  consultContent as "Consulter le contenu\n partagé"
 
 register  .> login  : extends
 shareContent ..> login : include
-consultContent ..> login : include
 askQuestion ..> login : include
-answerQuestion ..> login : include
+interact ..> login : include
 communicate ..> login : include
 
 communicate <|-- chat
 communicate <|- forums
+interact <|-- answerQuestion
+interact <|-- comment
 
-student -- shareContent
 student -- consultContent
+student -- shareContent
 student -- askQuestion
-student -- answerQuestion
+student -- interact
 student -- communicate
 
 }

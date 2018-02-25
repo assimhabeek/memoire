@@ -50,6 +50,6 @@ user "1" *-- "0.*" media : est partagé par
 contribution "0.*" o-- "0.*" media : contient
 contribution <|-- post
 contribution <|- comments
-contribution <|- response
+contribution <|-- response
 post "1" *- "0.*" comments :\tcontient\t
 @enduml
