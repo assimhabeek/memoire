@@ -1,5 +1,4 @@
 @startuml
-left to right direction
 skinparam backgroundColor #fff
 skinparam defaultFontColor #37474f
 skinparam defaultFontSize 18
@@ -12,15 +11,30 @@ skinparam classArrowColor #000
 
 hide class circle
 
+class "Spécialité" as specialty{
+-id : long
+-abb : String
+-nom : String
+}
+class "Module" as module{
+-id : long
+-abb : String
+-nom : String
+-semestre : int
+}
+
 class  "Utilisateur"  as user{
 -id : long
 -prenom : String
+-ImageProfil : String
 -nom : String
 -email : String
 -nomUtilisateur : String
 -passe : String
 -annee : int
 }
+
+
 
 class "Contribution" as contribution {
 -id : long
@@ -39,17 +53,20 @@ class "Reponse" as response{
 -approuver: boolean
 }
 
-class "Media" as media{
+class "Attachement" as media{
 id : long
 link : string
 }
 
-user  *- "0.*" contribution : est contribué par
-top to bottom direction
-user "1" *-- "0.*" media : est partagé par
-contribution "0.*" o-- "0.*" media : contient
+specialty  *-- "1.*" module : "est enseigné dans            "
+user  *-- "0.*" contribution : "  est contribué par   "
+user  "1.*" --o "1" specialty : "Appartient à"
+contribution  "0.*" --o "1" module : "Lié à     "
+
+
+contribution "1.*" o-- "0.*" media : "Attaché"
 contribution <|-- post
-contribution <|- comments
+contribution <|-- comments
 contribution <|-- response
-post "1" *- "0.*" comments :\tcontient\t
+post "1" -* "0.*" comments : \tcontient\t
 @enduml

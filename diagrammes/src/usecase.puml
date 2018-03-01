@@ -2,9 +2,9 @@
 left to right direction
 skinparam backgroundColor #fff
 skinparam defaultFontColor #37474f
-skinparam defaultFontSize 18
+skinparam defaultFontSize 16
 skinparam defaultFontName serif
-skinparam defaultFontStyle normal
+skinparam defaultFontStyle bold
 skinparam usecaseBackgroundColor #fff
 skinparam usecaseBorderColor #000
 skinparam usecaseArrowColor #000
@@ -14,40 +14,59 @@ skinparam actorBorderColor #000
 
 
 
+actor Administrateur as admin
 actor Étudiant as student
+
 rectangle "Diagramme de cas d'utilisation \ndu système d'apprentissage social"{
 
 usecase shareContent as "Partager du contenu"
 usecase login as "Authentifier
                  --
-                 Pas déjà enregistré"
+                 (S'inscrire)
+                 Pas déjà enregistré
+                 --
+                 (Récupérer le mot de passe)
+                 Il a oublié le mot de pass"
 usecase  register as "S'inscrire"
+usecase  recover  as "Récupérer le mot \nde passe"
 
 usecase  askQuestion as "Poser des questions"
 usecase  answerQuestion as "Répondez aux questions"
 usecase  comment as "Commenter sur \nune publication"
+usecase  evaluate as "Évaluer une réponse"
 usecase  communicate  as "Communiquer \navec les autres"
 usecase  chat as "Communiquer \npar chat"
 usecase  forums as "Communiquer \npar des forums"
 usecase  interact as "Interagit avec\n un partage"
+usecase  downloadContent as "Télécharger les pièces jointes"
 usecase  consultContent as "Consulter le contenu\n partagé"
+usecase defineMSY as "définir \ndes modules,\n des spécialités \npar années"
 
+student <|- admin
+
+login   <. recover   : extends
 register  .> login  : extends
+
 shareContent ..> login : include
 askQuestion ..> login : include
 interact ..> login : include
 communicate ..> login : include
+downloadContent ..> login : include
+defineMSY ..> login : include
 
-communicate <|-- chat
-communicate <|- forums
+communicate <|- chat
+forums -|> communicate
 interact <|-- answerQuestion
 interact <|-- comment
+interact <|-- evaluate
 
+admin -- defineMSY
 student -- consultContent
 student -- shareContent
 student -- askQuestion
 student -- interact
 student -- communicate
+student -- downloadContent
 
 }
 @enduml
