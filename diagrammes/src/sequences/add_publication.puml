@@ -1,0 +1,48 @@
+@startuml
+skinparam backgroundColor #fff
+skinparam defaultFontColor #37474f
+skinparam defaultFontSize 14
+skinparam defaultFontName serif
+skinparam defaultFontStyle bold
+skinparam actorBackgroundColor #fff
+skinparam actorBorderColor #000
+skinparam boundaryBackgroundColor #fff
+skinparam boundaryBorderColor #000
+skinparam controlBackgroundColor #fff
+skinparam controlBorderColor #000
+skinparam entityBackgroundColor #fff
+skinparam entityBorderColor #000
+skinparam participantBackgroundColor #fff
+skinparam participantBorderColor #000
+skinparam ArrowColor #000
+skinparam sequenceLifeLineBorderColor #000
+skinparam sequenceBoxBorderColor #FFF
+skinparam ParticipantPadding -80
+
+title Diagramme de séquence : Ajouter publication - scénario nominal
+
+hide footbox
+
+
+actor Étudiant as student
+
+boundary indexTemplate
+boundary XTemplate
+boundary formTemplate
+control PublicationComponent
+entity ContributionRepository
+student ->  indexTemplate : cliquez sur X
+create XTemplate
+indexTemplate -> XTemplate
+student ->  XTemplate : cliquez sur Ajouter une publication
+create formTemplate
+XTemplate ->  formTemplate
+student ->  formTemplate : cliquez sur publier
+formTemplate -> PublicationComponent : submit(pub)
+destroy formTemplate
+PublicationComponent -> ContributionRepository : insert(pub)
+ContributionRepository --> PublicationComponent : ok
+PublicationComponent --> XTemplate: ok
+XTemplate --> student :Publié avec succès
+
+@enduml

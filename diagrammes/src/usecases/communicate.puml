@@ -1,0 +1,28 @@
+@startuml
+left to right direction
+skinparam backgroundColor #fff
+skinparam defaultFontColor #37474f
+skinparam defaultFontSize 16
+skinparam defaultFontName serif
+skinparam defaultFontStyle bold
+skinparam usecaseBackgroundColor #fff
+skinparam usecaseBorderColor #000
+skinparam usecaseArrowColor #000
+skinparam usecaseActorBorderColor black
+
+
+
+
+rectangle "Raffinement du cas d’utiilisation\n Discuter avec les autres"{
+
+usecase  communicate  as "Discuter \navec les autres"
+usecase  chat as "Discuter \npar chat"
+usecase  forums as "Discuter \npar des forums"
+
+
+communicate  <|-- chat
+communicate  <|-- forums
+
+
+}
+@enduml

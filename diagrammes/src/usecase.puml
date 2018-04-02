@@ -19,28 +19,23 @@ actor Étudiant as student
 
 rectangle "Diagramme de cas d'utilisation \ndu système d'apprentissage social"{
 
-usecase shareContent as "Partager du contenu"
-usecase login as "Authentifier
+usecase shareContent as "Partager les publications"
+usecase interact as "Interagir avec\n une publication"
+usecase downloadContent as "Télécharger les pièces\n jointes a une publications"
+
+usecase login as "S'Authentifier
                  --
-                 (S'inscrire)
+                 (Créer un  nouveau \n compte)
                  Pas déjà enregistré
                  --
                  (Récupérer le mot de passe)
                  Il a oublié le mot de pass"
-usecase  register as "S'inscrire"
+usecase  register as "Créer un  nouveau \n compte"
 usecase  recover  as "Récupérer le mot \nde passe"
-
-usecase  askQuestion as "Poser des questions"
-usecase  answerQuestion as "Répondez aux questions"
-usecase  comment as "Commenter sur \nune publication"
-usecase  evaluate as "Évaluer une réponse"
-usecase  communicate  as "Communiquer \navec les autres"
-usecase  chat as "Communiquer \npar chat"
-usecase  forums as "Communiquer \npar des forums"
-usecase  interact as "Interagit avec\n un partage"
-usecase  downloadContent as "Télécharger les pièces jointes"
-usecase  consultContent as "Consulter le contenu\n partagé"
-usecase defineMSY as "définir \ndes modules,\n des spécialités \npar années"
+usecase  communicate  as "Discuter \navec les autres"
+usecase  defineMSY as "Définir \ndes modules,\n des spécialités \npar années"
+usecase  deleteViolations as "Supprimer les violations"
+usecase  editProfil as "Mettre à jour le profil"
 
 student <|- admin
 
@@ -48,25 +43,20 @@ login   <. recover   : extends
 register  .> login  : extends
 
 shareContent ..> login : include
-askQuestion ..> login : include
 interact ..> login : include
 communicate ..> login : include
 downloadContent ..> login : include
 defineMSY ..> login : include
+deleteViolations ..> login : include
+editProfil ..> login : include
 
-communicate <|- chat
-forums -|> communicate
-interact <|-- answerQuestion
-interact <|-- comment
-interact <|-- evaluate
 
 admin -- defineMSY
-student -- consultContent
+admin -- deleteViolations
 student -- shareContent
-student -- askQuestion
 student -- interact
 student -- communicate
 student -- downloadContent
-
+student -- editProfil
 }
 @enduml

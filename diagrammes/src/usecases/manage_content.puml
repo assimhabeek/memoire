@@ -1,0 +1,36 @@
+@startuml
+left to right direction
+skinparam backgroundColor #fff
+skinparam defaultFontColor #37474f
+skinparam defaultFontSize 16
+skinparam defaultFontName serif
+skinparam defaultFontStyle bold
+skinparam usecaseBackgroundColor #fff
+skinparam usecaseBorderColor #000
+skinparam usecaseArrowColor #000
+skinparam usecaseActorBorderColor black
+skinparam noteBackgroundColor #fff
+skinparam noteBorderColor #000
+
+
+
+
+rectangle "Raffinement du cas d’utiilisation\n Partager les publications"{
+
+usecase shareContent as "Partager les publications"
+note top: Les publications sont divisées en quatre :\n 1) Partager des cours,résumes,\nexercices,interrogations et des contrôles \n 2) Partager des mémoires  \n 3) FAQ \n 4) Publications des clubs scientifiques
+
+usecase add as "Ajouter publication"
+usecase edit as "Modifier publication"
+    usecase delete as "Supprimer publication"
+
+shareContent <|-- add
+shareContent <|-- edit
+shareContent <|-- delete
+
+
+
+
+
+}
+@enduml

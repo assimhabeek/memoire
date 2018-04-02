@@ -1,0 +1,48 @@
+@startuml
+skinparam backgroundColor #fff
+skinparam defaultFontColor #37474f
+skinparam defaultFontSize 14
+skinparam defaultFontName serif
+skinparam defaultFontStyle bold
+skinparam actorBackgroundColor #fff
+skinparam actorBorderColor #000
+skinparam boundaryBackgroundColor #fff
+skinparam boundaryBorderColor #000
+skinparam controlBackgroundColor #fff
+skinparam controlBorderColor #000
+skinparam entityBackgroundColor #fff
+skinparam entityBorderColor #000
+skinparam participantBackgroundColor #fff
+skinparam participantBorderColor #000
+skinparam ArrowColor #000
+skinparam sequenceLifeLineBorderColor #000
+skinparam sequenceBoxBorderColor #FFF
+skinparam ParticipantPadding -80
+
+title Diagramme de séquence : Créer un nouveau compte - scénario nominal
+
+hide footbox
+
+
+actor Étudiant as student
+
+boundary RegisterTemplate
+boundary EmailVeriTemplate
+control RegisterComponent
+entity UsersRepository
+participant EmailHandler
+
+student ->  RegisterTemplate : cliquez sur\n s'inscrire
+RegisterTemplate -> RegisterComponent : submit(user)
+RegisterComponent -> UsersRepository : insert(user)
+UsersRepository -> EmailHandler: sendEmail()
+EmailHandler ->]: send()
+EmailHandler --> UsersRepository : ok
+UsersRepository --> RegisterComponent :ok
+RegisterComponent--> RegisterTemplate :Nous avons envoyé\nun lien vers votre email
+destroy RegisterTemplate
+
+create EmailVeriTemplate
+student -> EmailVeriTemplate:cliquez sur le lien\n qui a été envoyé
+
+@enduml

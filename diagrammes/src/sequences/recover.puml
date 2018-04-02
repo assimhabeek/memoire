@@ -1,0 +1,40 @@
+@startuml
+skinparam backgroundColor #fff
+skinparam defaultFontColor #37474f
+skinparam defaultFontSize 14
+skinparam defaultFontName serif
+skinparam defaultFontStyle bold
+skinparam actorBackgroundColor #fff
+skinparam actorBorderColor #000
+skinparam boundaryBackgroundColor #fff
+skinparam boundaryBorderColor #000
+skinparam controlBackgroundColor #fff
+skinparam controlBorderColor #000
+skinparam entityBackgroundColor #fff
+skinparam entityBorderColor #000
+skinparam participantBackgroundColor #fff
+skinparam participantBorderColor #000
+skinparam ArrowColor #000
+skinparam sequenceLifeLineBorderColor #000
+skinparam sequenceBoxBorderColor #FFF
+skinparam ParticipantPadding -80
+
+title Diagramme de séquence : Récupérer le mot de passe - scénario nominal
+
+hide footbox
+
+
+actor Étudiant as student
+
+boundary recoverTemplate
+control recoverComponent
+entity UsersRepository
+participant EmailHandler
+
+student ->  recoverTemplate : cliquez sur\n récupérer
+recoverTemplate -> recoverComponent : submit(email)
+recoverComponent -> UsersRepository : findUser(email)
+UsersRepository -> EmailHandler: sendEmail()
+EmailHandler ->]: send()
+
+@enduml

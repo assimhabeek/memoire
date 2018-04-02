@@ -15,6 +15,8 @@ class "Spécialité" as specialty{
 -id : long
 -abb : String
 -nom : String
+-DeAnnée : int
+-JusquAnnée : int
 }
 class "Module" as module{
 -id : long
