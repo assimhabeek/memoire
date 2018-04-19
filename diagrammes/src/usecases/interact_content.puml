@@ -16,17 +16,13 @@ skinparam usecaseActorBorderColor black
 rectangle "Raffinement du cas d’utiilisation\n Interagir avec une publication"{
 
 usecase  reportViolations as "Report violations"
-usecase  answerQuestion as "Répondez aux questions"
 usecase  comment as "Commenter sur \nune publication"
-usecase  evaluate as "Évaluer une réponse"
 usecase  interact as "Interagir avec\n une publication"
 
 
 
 
-interact <|-- answerQuestion
 interact <|-- comment
-interact <|-- evaluate
 interact <|- reportViolations
 
 }

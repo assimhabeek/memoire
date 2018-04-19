@@ -17,23 +17,38 @@ class "Spécialité" as specialty{
 -nom : String
 -DeAnnée : int
 -JusquAnnée : int
+trouverParAnnée(annee : int)
 }
+
 class "Module" as module{
 -id : long
 -abb : String
 -nom : String
+-annee : int
 -semestre : int
 }
 
 class  "Utilisateur"  as user{
 -id : long
--prenom : String
--ImageProfil : String
--nom : String
--email : String
 -nomUtilisateur : String
 -passe : String
+-prenom : String
+-nom : String
+-description : String
+-email : String
 -annee : int
+-spécialité : Specialite
+-ImageProfil : String
+-admin : boolean
+-vérifié : boolean
+
+trouverPar(nomUtilisateur:String)
+trouverPar(nomUtilisateur:String,passe : String)
+envoyerEmailInscription(id : long,email : String)
+validerCompte(id : long)
+envoyerEmailRécupération(id : long , email : String)
+changerPasse(id: Long, pass: String)
+MettreÀJourProfil(ut : Utilisateur)
 }
 
 
@@ -46,29 +61,39 @@ class "Contribution" as contribution {
 
 class "Publication" as post{
 -titre :string
+-trouverPar(filtre : List())
+-supprimer(id: long)
 }
 
-class "Commentaires" as comments
-
-class "Reponse" as response{
--points : int
--approuver: boolean
+class "Catégorie" as category{
+  -id : Long,
+  -titre: String,
+  -description: String,
+  -icon: String,
 }
+
+class "Commentaires" as comments {
+ trouverAvecPublication(idPub : int)
+}
+
 
 class "Attachement" as media{
 id : long
-link : string
+nom : String
+link : String
+trouverAvecPublication(idPub : int)
 }
 
-specialty  *-- "1.*" module : "est enseigné dans            "
-user  *-- "0.*" contribution : "  est contribué par   "
+user  *-right- "0.*" contribution : "  est contribué par   "
 user  "1.*" --o "1" specialty : "Appartient à"
-contribution  "0.*" --o "1" module : "Lié à     "
+specialty  *- "1.*" module : "est enseigné dans            "
+post  "0.*" --o "0.1" module : "Appartient à     "
+post  "0.*" --o "0.1" specialty : "Appartient à     "
+post  "0.*" --o "1" category : "Appartient à     "
 
 
-contribution "1.*" o-- "0.*" media : "Attaché"
-contribution <|-- post
-contribution <|-- comments
-contribution <|-- response
+post "1.*" o-- "0.*" media : "Attaché"
+contribution <|- post
+contribution <|- comments
 post "1" -* "0.*" comments : \tcontient\t
 @enduml

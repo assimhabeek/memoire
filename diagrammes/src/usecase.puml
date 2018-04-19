@@ -32,7 +32,7 @@ usecase login as "S'Authentifier
                  Il a oublié le mot de pass"
 usecase  register as "Créer un  nouveau \n compte"
 usecase  recover  as "Récupérer le mot \nde passe"
-usecase  communicate  as "Discuter \navec les autres"
+usecase  communicate  as "Chater \navec les autres"
 usecase  defineMSY as "Définir \ndes modules,\n des spécialités \npar années"
 usecase  deleteViolations as "Supprimer les violations"
 usecase  editProfil as "Mettre à jour le profil"
