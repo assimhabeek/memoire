@@ -10,7 +10,28 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="usecase.puml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/usecase.puml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="comment_publication.puml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/sequences/comment_publication.puml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -21,10 +42,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>clerk</find>
-      <find>mot</find>
-      <find>actor</find>
-      <find>defi</find>
       <find>user</find>
       <find>shareContent</find>
       <find>pose</find>
@@ -38,7 +55,6 @@
       <find>inter</find>
       <find>Login</find>
       <find>EmailVerificationTemplate</find>
-      <find>register</find>
       <find>Int</find>
       <find>du</find>
       <find>spec</find>
@@ -47,10 +63,26 @@
       <find>media</find>
       <find>discuter</find>
       <find>post</find>
+      <find>register</find>
+      <find>trouver</find>
+      <find>Email</find>
+      <find>UsersRepository</find>
+      <find>env</find>
+      <find>XTemplate</find>
+      <find>Component</find>
+      <find>ContributionRepository</find>
+      <find>formTemplate</find>
     </findStrings>
     <replaceStrings>
       <replace>Register</replace>
       <replace>recover</replace>
+      <replace>Inscrire</replace>
+      <replace>récupérer</replace>
+      <replace>UtilisateursDépôt</replace>
+      <replace>public</replace>
+      <replace>Composant</replace>
+      <replace>PublicationDépôt</replace>
+      <replace>CommentformTemplate</replace>
     </replaceStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -63,15 +95,17 @@
       <list>
         <option value="$PROJECT_DIR$/src/sequences/login-s-0.puml" />
         <option value="$PROJECT_DIR$/src/sequences/login-s-1.puml" />
-        <option value="$PROJECT_DIR$/src/sequences/login.puml" />
-        <option value="$PROJECT_DIR$/src/sequences/register.puml" />
-        <option value="$PROJECT_DIR$/src/sequences/recover.puml" />
-        <option value="$PROJECT_DIR$/src/sequences/add_publication.puml" />
         <option value="$PROJECT_DIR$/src/usecases/manage_content.puml" />
         <option value="$PROJECT_DIR$/src/usecases/communicate.puml" />
         <option value="$PROJECT_DIR$/src/usecases/interact_content.puml" />
-        <option value="$PROJECT_DIR$/src/usecase.puml" />
+        <option value="$PROJECT_DIR$/src/sequences/login.puml" />
+        <option value="$PROJECT_DIR$/src/sequences/recover.puml" />
+        <option value="$PROJECT_DIR$/src/sequences/register.puml" />
+        <option value="$PROJECT_DIR$/src/sequences/add_publication.puml" />
+        <option value="$PROJECT_DIR$/src/sequences/chater.puml" />
         <option value="$PROJECT_DIR$/src/class.puml" />
+        <option value="$PROJECT_DIR$/src/usecase.puml" />
+        <option value="$PROJECT_DIR$/src/sequences/comment_publication.puml" />
       </list>
     </option>
   </component>
@@ -109,7 +143,6 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -117,17 +150,6 @@
             <path>
               <item name="diagrammes" type="b2602c69:ProjectViewProjectNode" />
               <item name="diagrammes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="diagrammes" type="b2602c69:ProjectViewProjectNode" />
-              <item name="diagrammes" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="diagrammes" type="b2602c69:ProjectViewProjectNode" />
-              <item name="diagrammes" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-              <item name="usecases" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="diagrammes" type="b2602c69:ProjectViewProjectNode" />
@@ -145,23 +167,24 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/dist/usecases/manage_content.png" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/dist/sequence/comment_publication.png" />
     <property name="settings.editor.selected.configurable" value="org.plantuml.idea.lang.settings.PlantUmlSettingsPage" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Assim\Desktop\L3-project\memoire\diagrammes\dist\usecases" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Assim\Desktop\L3-project\memoire\diagrammes\src\sequences" />
       <recent name="C:\Users\Assim\Desktop\L3-project\memoire\diagrammes\src\usecases" />
       <recent name="C:\Users\Assim\Desktop\L3-project\memoire\diagrammes\src" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Assim\Desktop\L3-project\memoire\diagrammes\dist\usecases" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -301,17 +324,24 @@
       <workItem from="1520923760091" duration="534000" />
       <workItem from="1520928926926" duration="32000" />
       <workItem from="1520943225442" duration="10000" />
-      <workItem from="1524122438489" duration="3329000" />
+      <workItem from="1524122438489" duration="6125000" />
+      <workItem from="1524153530508" duration="2172000" />
+      <workItem from="1524228776533" duration="1928000" />
+      <workItem from="1524232092703" duration="2359000" />
+      <workItem from="1524301838560" duration="317000" />
+      <workItem from="1524835688703" duration="699000" />
+      <workItem from="1524922361448" duration="97000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49016000" />
+    <option name="totallyTimeSpent" value="59384000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5068182" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="PlantUML" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.38939393" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -324,7 +354,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13181818" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24166666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -351,21 +381,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/usecase.puml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="34" column="27" lean-forward="false" selection-start-line="34" selection-start-column="27" selection-end-line="34" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sequences/register.puml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sequences/login.puml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="640">
@@ -611,68 +626,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sequences/login-s-1.puml" />
-    <entry file="file://$PROJECT_DIR$/src/sequences/login.puml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="32" column="36" lean-forward="false" selection-start-line="32" selection-start-column="36" selection-end-line="32" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sequences/recover.puml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="39" column="7" lean-forward="false" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sequences/register.puml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/sequences/add_publication.puml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="28" column="9" lean-forward="false" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dist/usecases/interact_content.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/usecases/communicate.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/usecases/communicate.puml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/usecase.puml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/usecases/interact_content.puml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/usecases/communicate.png" />
+    <entry file="file://$PROJECT_DIR$/src/usecases/communicate.puml" />
     <entry file="file://$PROJECT_DIR$/dist/usecases/manage_content.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -682,14 +642,70 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
           <caret line="17" column="55" lean-forward="false" selection-start-line="17" selection-start-column="55" selection-end-line="17" selection-end-column="55" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/usecases/interact_content.puml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="15" column="28" lean-forward="false" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sequences/add_publication.puml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="38" column="38" lean-forward="false" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sequences/chater.puml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="524">
+          <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sequences/login.puml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="36" column="19" lean-forward="true" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sequences/recover.puml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="35" column="18" lean-forward="false" selection-start-line="35" selection-start-column="18" selection-end-line="35" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sequences/register.puml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="41" column="17" lean-forward="false" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/class.puml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="59" column="1" lean-forward="true" selection-start-line="59" selection-start-column="1" selection-end-line="59" selection-end-column="1" />
+        <state relative-caret-position="488">
+          <caret line="107" column="0" lean-forward="false" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/usecase.puml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sequences/comment_publication.puml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
         </state>
       </provider>

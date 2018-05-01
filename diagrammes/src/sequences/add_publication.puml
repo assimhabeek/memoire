@@ -26,23 +26,19 @@ hide footbox
 
 actor Étudiant as student
 
-boundary indexTemplate
-boundary XTemplate
+boundary accueilTemplate
 boundary formTemplate
-control PublicationComponent
-entity ContributionRepository
-student ->  indexTemplate : cliquez sur X
-create XTemplate
-indexTemplate -> XTemplate
-student ->  XTemplate : cliquez sur Ajouter une publication
+control PublicationComposant
+entity PublicationDépôt
+
+student ->  accueilTemplate : cliquez sur Ajouter
 create formTemplate
-XTemplate ->  formTemplate
+accueilTemplate ->  formTemplate
 student ->  formTemplate : cliquez sur publier
-formTemplate -> PublicationComponent : submit(pub)
-destroy formTemplate
-PublicationComponent -> ContributionRepository : insert(pub)
-ContributionRepository --> PublicationComponent : ok
-PublicationComponent --> XTemplate: ok
-XTemplate --> student :Publié avec succès
+formTemplate -> PublicationComposant : soumettre(pub)
+PublicationComposant -> PublicationDépôt : insérer(pub)
+PublicationDépôt --> PublicationComposant : ok
+PublicationComposant --> formTemplate: ok
+formTemplate --> student :Publié avec succès
 
 @enduml

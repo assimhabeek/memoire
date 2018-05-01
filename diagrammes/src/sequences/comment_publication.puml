@@ -19,26 +19,26 @@ skinparam sequenceLifeLineBorderColor #000
 skinparam sequenceBoxBorderColor #FFF
 skinparam ParticipantPadding -80
 
-title Diagramme de séquence : S'authentifier - scénario nominal
+title Diagramme de séquence : Commenter sur une publication - scénario nominal
 
 hide footbox
 
 
 actor Étudiant as student
-boundary loginTemplate
-boundary pageAccueil
-control LoginComposant
-entity UtilisateursDépôt
-participant  GestionnaireAuthentification as AuthenticationHandler
 
-student ->  loginTemplate : cliquez sur\n connexion
-loginTemplate -> LoginComposant : soumettre(uname,pass)
-LoginComposant -> UtilisateursDépôt : trouverPar(nomU,pass)
-UtilisateursDépôt -> AuthenticationHandler : créerJeton(user)
-LoginComposant <-- AuthenticationHandler   : jeton
-LoginComposant -> loginTemplate
-destroy loginTemplate
-create pageAccueil
-LoginComposant -> pageAccueil
+boundary accueilTemplate
+boundary commentformTemplate
+control PublicationComposant
+entity CommentDépôt
+
+student ->  accueilTemplate : cliquez sur commontaire
+create commentformTemplate
+accueilTemplate ->  commentformTemplate
+student ->  commentformTemplate : cliquez sur commenter
+commentformTemplate -> PublicationComposant : soumettre(pub)
+PublicationComposant -> CommentDépôt : insérer(pub)
+CommentDépôt --> PublicationComposant : ok
+PublicationComposant --> commentformTemplate: ok
+commentformTemplate --> student :Commentaire est publié avec succès
 
 @enduml

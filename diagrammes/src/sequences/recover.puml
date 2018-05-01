@@ -26,15 +26,16 @@ hide footbox
 
 actor Étudiant as student
 
-boundary recoverTemplate
-control recoverComponent
-entity UsersRepository
-participant EmailHandler
+boundary RécupérerTemplate
+control RécupérerComposant
+entity UtilisateursDépôt
+participant GestionnaireEmail
 
-student ->  recoverTemplate : cliquez sur\n récupérer
-recoverTemplate -> recoverComponent : submit(email)
-recoverComponent -> UsersRepository : findUser(email)
-UsersRepository -> EmailHandler: sendEmail()
-EmailHandler ->]: send()
+student ->  RécupérerTemplate : cliquez sur\n récupérer
+RécupérerTemplate -> RécupérerComposant : soumettre(email)
+RécupérerComposant -> UtilisateursDépôt : trouverPar(email)
+UtilisateursDépôt -> UtilisateursDépôt : envoyerEmailRécupération(id,email)
+UtilisateursDépôt -> GestionnaireEmail: envoyerEmail()
+GestionnaireEmail ->]: envoyer()
 
 @enduml

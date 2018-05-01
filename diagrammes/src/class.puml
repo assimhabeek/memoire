@@ -65,11 +65,21 @@ class "Publication" as post{
 -supprimer(id: long)
 }
 
+user "0..*" -- "0..*" user
+(user, user) .. Ami
+(user, user) .. Chat
+
+class Ami{
+  état : int
+}
+
+class Chat{
+  message : String
+  date : Timestamp
+}
+
 class "Catégorie" as category{
   -id : Long,
-  -titre: String,
-  -description: String,
-  -icon: String,
 }
 
 class "Commentaires" as comments {
@@ -84,10 +94,10 @@ link : String
 trouverAvecPublication(idPub : int)
 }
 
-user  *-right- "0.*" contribution : "  est contribué par   "
+user  *-- "0.*" contribution : "  est contribué par   "
 user  "1.*" --o "1" specialty : "Appartient à"
 specialty  *- "1.*" module : "est enseigné dans            "
-post  "0.*" --o "0.1" module : "Appartient à     "
+post  "0.*" ---o "0.1" module : "Appartient à     "
 post  "0.*" --o "0.1" specialty : "Appartient à     "
 post  "0.*" --o "1" category : "Appartient à     "
 

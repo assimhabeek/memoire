@@ -26,21 +26,21 @@ hide footbox
 
 actor Étudiant as student
 
-boundary RegisterTemplate
+boundary InscrireTemplate
 boundary EmailVeriTemplate
-control RegisterComponent
-entity UsersRepository
-participant EmailHandler
+control InscrireComposant
+entity UtilisateursDépôt
+participant GestionnaireEmail
 
-student ->  RegisterTemplate : cliquez sur\n s'inscrire
-RegisterTemplate -> RegisterComponent : submit(user)
-RegisterComponent -> UsersRepository : insert(user)
-UsersRepository -> EmailHandler: sendEmail()
-EmailHandler ->]: send()
-EmailHandler --> UsersRepository : ok
-UsersRepository --> RegisterComponent :ok
-RegisterComponent--> RegisterTemplate :Nous avons envoyé\nun lien vers votre email
-destroy RegisterTemplate
+student ->  InscrireTemplate : cliquez sur\n s'inscrire
+InscrireTemplate -> InscrireComposant : soumettre(user)
+InscrireComposant -> UtilisateursDépôt : insérer(user)
+UtilisateursDépôt -> GestionnaireEmail: envoyerEmail()
+GestionnaireEmail ->]: envoyer()
+GestionnaireEmail --> UtilisateursDépôt : ok
+UtilisateursDépôt --> InscrireComposant :ok
+InscrireComposant--> InscrireTemplate :Nous avons envoyé\nun lien vers votre email
+destroy InscrireTemplate
 
 create EmailVeriTemplate
 student -> EmailVeriTemplate:cliquez sur le lien\n qui a été envoyé
